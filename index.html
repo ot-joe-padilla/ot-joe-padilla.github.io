@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Website Development at One Technologies</title>
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Joe Padilla">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- Slides 1 -->
+			<section>
+				<h1>Web Dev&#8230;</h1>
+				<p>&#8220;or &#8216;Website Development,&#8217; if, you know, you&#8217;re not into the whole brevity thing.&#8221;</p>
+				<p><small>&#8211; Jeffery &#8220;The Dude&#8221; Lebowski</small></p>
+			</section>
+			<!-- Slide 2 -->
+			<section>
+				<section>
+					<p><small>So&#8230;</small></p>
+					<h1>What is Website Development?</h1>
+					<p>At One Technologies, Web development refers to the &#8220;front end&#8221; component of the development process.</p>
+				</section>
+				<section>
+					<h2>The &#8220;Front End&#8221;</h2>
+					<p>The &#8220;front end&#8221; is the client interface responsible for collecting input from the user.</p>
+				</section>
+				<section>
+					<h2>The Client Interface</h2>
+					<img src="img/hero-portal.png" />
+					 <p>At &#8220;The OT,&#8221; the client interface of choice is the browser.</p>	
+				</section>			
+			</section>
+			<!-- Slide 3 -->
+			<section>
+				<section>
+					<h1>Browsers and the DOM</h1>
+					<p>Manipulating the Document Object Model (DOM)</p>
+				</section>
+				<section>
+					<h2>Imagine If You Will&#8230;</h2>
+					<ul>
+						<li>A web page is a model&#8230;</li>
+						<li>a model of a document&#8230;</li>
+						<li>a document that is an object</li>
+					</ul>
+					<aside class="notes">
+						If you print out a web page, you now have a physical real world object in your hands. That object just happens to be a document. Since we aren't dealing with FAX machines, our browsers build a model of that document object digitally.
+					</aside>
+				</section>
+				<section>
+					<h2>HTML and the DOM</h2>	
+					<pre><code data-trim contenteditable>
+&lt;button id="theBtn" type="submit" class="btn-cta"&gt;View Your Scores Now&lt;/button&gt;
+					</code></pre>
+					<img src="img/btn-style-0.png" />
+					<p>HTML adds the content to the DOM.</p>	
+					<aside class="notes">
+						HTML adds each element as an object on the DOM. Because each element rendered on the browser follows a standard node tree heirarchy, we are able to traverse through the DOM and manipulate those elements. 
+					</aside>
+				</section>
+				<section>
+					<h2>CSS and the DOM</h2>
+					<pre><code data-trim contenteditable>
+.btn-cta {
+  color: #605800;
+  font-size:25px;
+  font-weight: 700;
+  outline: 0;
+  text-shadow: 0 2px 0 rgb(255,255,255, .25);
+  background: -webkit-gradient(linear,0 0,0 100%, from(#f7e621), to(#ddcc08));
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+}
+					</code></pre>
+					<img src="img/btn-style-1.png" />
+					<p>CSS adds the aesthetic layer to the HTML.</p>
+					<aside class="notes">
+						Cascading Style Sheets separate the document's content from its actual presentation. Layout, colors, fonts... basically the design proposed by the creative team is actually created with the CSS. 
+					</aside>
+				</section>
+				<section>
+					<h2>JavaScript and the DOM</h2>
+					<pre><code data-trim contenteditable>
+<script type="text/javascript">
+// Submits the form when elements on the LP are clicked
+$('#theBtn').click(function() {$('#theForm').submit();});
+</script>
+					</code></pre>
+					<p>JavaScript adds interaction to the HTML.</p>
+					<aside class="notes">
+						JavaScript allows us to separate the document's content and presentation layers so that we can add behaviors to the document based on the interactions that happen in the browser. In this example, when a user clicks the button we created, we are able to submit the form
+					</aside>
+				</section>
+				<section>
+					<h2>HTML + CSS + JavaScript</h2>
+					<img src="img/FS360-noDOM.png" />
+					<p>We can now create an experience for our users</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<p><small>So again&#8230;</small></p>
+					<h1>What is Web Dev at &#8220;The OT?&#8221;</h1>
+				</section>
+				<section>
+					<h2>The 3 Masters</h2>
+					<ul>
+						<li>Testing/Marketing</li>
+						<li>Product</li>
+						<li>Customer Service</li>
+					</ul>
+					<aside class="notes">
+						Your web dev team uses these technologies to support the front end endeavors for marketing's testing team, the product team and yes, even the customer service team.
+					</aside>
+				</section>
+				<section>
+					<h2>Testing/Marketing</h2>
+					<img src="/img/testing.png" />
+					<ul>
+						<li>A/B testing,</li>
+						<li>adding tracking and conversion pixels,</li>
+						<li>testing product configurations,</li>
+						<li>etc&#8230;</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Product</h2>
+					<img src="img/hero-portal.png" />
+					<ul>
+						<li>Member portal experiences,</li>
+						<li>product white labels,</li>
+						<li>etc&#8230;</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Customer Service</h2>
+					<ul>
+						<li>Agent portal,*</li>
+						<li>etc&#8230;</li>
+					</ul>
+					<p><small>* We know that portal needs a serious update. We'd love to fix it if only we can get it prioritized. :-/</small></p>
+				</section>
+			</section>	
+			<section>
+				<h1>Questions?</h1>
+			</section>		
+		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+
+	</script>
+</body>
+</html>
